@@ -16,6 +16,8 @@ while player != 'Sair':
     print('4 - Sair')
     
     op = int(input('Informe sua escolha: '))
+    while op < 1 or op > 4:
+        op = int(input('Opção inválida. Informe sua escolha novamente: '))
 
     if op == 1:
         player = 'Pedra'
@@ -25,10 +27,8 @@ while player != 'Sair':
         player = 'Tesoura'
     elif op == 4:
         player = 'Sair'
-        print('')
-        print('Saindo...')
-    else:
-        print('Opção inválida')
+        print('\nSaindo...')
+        break
 
     print(f'\n{player} x {choice}')
 
